@@ -1,0 +1,1308 @@
+/* =========================
+   CSS RESET & VARIABLES
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --primary: #E63946;
+    --primary-dark: #C62834;
+    --accent: #FFB703;
+  
+    --dark: #1D1D1D;
+    --text: #333333;
+    --text-light: #666666;
+    --light: #F8F9FA;
+    --gray: #E9ECEF;
+    --white: #FFFFFF;
+  
+    --radius: 8px;
+    --transition: all 0.3s ease;
+  }
+  
+  /* =========================
+     BASE STYLES
+  ========================= */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--light);
+  }
+  
+  img {
+    width: 100%;
+    display: block;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .container {
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: auto;
+  }
+  
+  /* =========================
+     HEADER & NAVIGATION
+  ========================= */
+  .site-header {
+    background: var(--dark);
+    color: var(--white);
+  }
+  
+  .header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+  }
+  
+  .brand-icon {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+  }
+  
+  .logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-left: 40px;
+    
+  }
+  .life-content{
+    color: #C62834;
+  }
+  
+  .main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .main-nav a {
+    color: var(--white);
+    font-weight: 500;
+  }
+  
+  .main-nav a.active,
+  .main-nav a:hover {
+    color: var(--primary);
+  }
+  
+  /* =========================
+     FOOTER
+  ========================= */
+  .site-footer {
+    background: var(--dark);
+    color: #ccc;
+    padding: 3rem 0 1.5rem;
+
+  
+  }
+  
+  .footer-flex {
+    display: flex;
+    gap:120px;
+    /* justify-content:center; */
+    /* align-items: center; */
+    margin-bottom: 2rem;
+    /* max-width: 900px; */
+    margin-left: 50px;
+    margin-right: 10px;
+  }
+  
+  .site-footer h3,
+  .site-footer h4 {
+    color: var(--accent);
+    margin-bottom: 1rem;
+    width: 90px;
+  }
+  
+  .site-footer ul {
+    list-style: none;
+  }
+  
+  .site-footer li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .site-footer a:hover {
+    color: var(--white);
+  }
+  
+  .copyright {
+    text-align: center;
+    color: #777;
+    font-size: 0.9rem;
+  
+  }
+  
+  /* =========================
+     HERO SECTION
+  ========================= */
+ .home-hero {
+    position: relative;
+    background: url("images/hero-gym.jpg") center / cover no-repeat ;
+    min-height: 70vh;
+    
+    display: flex;
+    align-items: center;
+  }
+  
+  .hero-overlay {
+    position: absolute;
+      inset: 0;
+      background: rgba(0,0,0 ,0.65);
+    
+  }
+  
+  .hero-content {
+    position: relative;
+    color: var(--white);
+    max-width: 600px;
+    padding: 30px;
+    margin-left: 20px;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-description {
+    color: #ddd;
+    margin-bottom: 2rem;
+    font-weight: 500;
+  }
+  
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  /* =========================
+     BUTTONS
+  ========================= */
+  .btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius);
+    font-weight: 600;
+    transition: var(--transition);
+    display: inline-block;
+  }
+  
+  .btn-primary {
+    background: var(--primary);
+    color: var(--white);
+  }
+  
+  .btn-primary:hover {
+    background: var(--primary-dark);
+  }
+  
+  .btn-accent {
+    background: var(--accent);
+    color: var(--dark);
+  }
+  .btn-accent:hover {
+    background:#967407 ;
+  }
+  
+  /* =========================
+     SECTIONS
+  ========================= */
+  .section {
+    padding: 3rem 0;
+  }
+  
+  .section-light {
+    padding: 3rem 0;
+    background: var(--white);
+  }
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .section-header p {
+    color: var(--text-light);
+  }
+  
+  /* =========================
+     FEATURES
+  ========================= */
+  .feature-list {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .feature-card {
+    background: var(--white);
+    padding: 10px;
+    border-radius: var(--radius);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: var(--transition);
+    border-top: 4px solid var(--primary);
+  }
+  
+  .feature-card:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  }
+  
+  .feature-icon {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    display: block;
+    
+  ;
+  }
+  
+  .feature-card h3 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+  }
+  .feature-card p{
+    text-align: center;
+  }
+  
+  /* =========================
+     PROGRAMS
+  ========================= */
+  .program-list {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .program-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: var(--transition);
+  }
+  
+  .program-card:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  }
+  
+  .program-body {
+    padding: 1.5rem;
+  }
+  
+  .program-body h3 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+  
+  }
+  
+  .section-action {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  /* =========================
+     STATS
+  ========================= */
+  .stats-list {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .stat-card {
+    background: var(--white);
+    flex: 1;
+    text-align: center;
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-top: 4px solid var(--primary);
+  }
+  
+  .stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary);
+    display: block;
+  }
+  
+  .stat-label {
+    color: var(--text-light);
+  }
+  
+  
+  /* =========================
+     RESPONSIVE
+  ========================= */
+  @media (max-width: 768px) {
+    .header-flex,
+    .feature-list,
+    .program-list,
+    .stats-list,
+    .footer-flex {
+      flex-direction: column;
+    }
+  
+    .hero h1 {
+      font-size: 2rem;
+    }
+  
+    .hero-actions {
+      flex-direction: column;
+    }
+  }
+  /* ================================
+   ABOUT PAGE
+   
+================================ */
+
+/* ===== Page Hero Banner ===== */
+.about-hero {
+  position: relative;
+  background: url("images/gym-bg.jpg") center/cover no-repeat;
+  padding: 80px 20px;
+  min-height: 70vh;
+  text-align: center;
+  color: #fff;
+}
+
+.page-hero .hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  /* overlay: ; */
+}
+
+.page-hero-content {
+  position: relative;
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+}
+
+.page-hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.page-hero-content p {
+  font-size: 1.1rem;
+  color: #f1f1f1;
+  line-height: 1.6;
+}
+
+/* ===== Our Story Section ===== */
+.about-content {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 320px;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+  color: #1d1d1d;
+}
+
+.about-text p {
+  margin-bottom: 15px;
+  line-height: 1.7;
+  color: #555;
+}
+
+.about-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Mission & Values Section ===== */
+.values-list {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  /* justify-content: space-between; */
+  flex-wrap: wrap;
+}
+
+.values-image {
+  flex: 1;
+  min-width: 300px;
+  margin-top: 45px;
+}
+
+.values-image img {
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.values-content {
+  flex: 1;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.value-card {
+
+  /* padding: 25px; */
+  border-radius: 10px;
+  /* box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08); */
+}
+
+.value-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.value-card p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+
+/* ===== Trainers Section ===== */
+/* .team-list { */
+  /* display: flex; */
+  /* gap: 25px; */
+  /* justify-content: center; */
+  /* flex-wrap: wrap; */
+  /* margin-top: 40px; */
+/* } */
+
+/* .team-card { */
+  /* background: #fff; */
+  /* width: 300px; */
+  /* padding: 25px; */
+  /* border-radius: 12px; */
+  /* text-align: center; */
+  /* box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08); */
+  /* transition: all 0.3s ease; */
+/* } */
+.team-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+
+  flex-wrap: nowrap;       
+}
+
+.team-card {
+  width: 30%;
+  height: 340px;           
+
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+
+
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* .team-card img { */
+  /* width: 100%; */
+  /* border-radius: 10px; */
+  /* margin-bottom: 15px; */
+  
+/* } */
+/* .team-card img { */
+  /* width: 100%; */
+  /* height: 250px;        Force equal height */
+  /* object-fit: cover;    Crop instead of stretching */
+  /* border-radius: 50%; */
+  /* margin-bottom: 15px; */
+/* } */
+.team-card img {
+  width: 120px;
+  height: 120px;
+
+  border-radius: 50%;    
+  object-fit: cover;
+
+  margin: 0 auto 15px;
+}
+
+
+.team-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+/* .trainer-role { */
+  /* display: inline-block; */
+  /* font-size: 0.95rem; */
+  /* color: #e63946; */
+  /* font-weight: 600; */
+  /* margin-bottom: 12px; */
+/* } */
+.trainer-role {
+  font-size: 14px;
+  font-weight: 600;
+  color: #E63946;
+}
+
+
+/* .trainer-note { */
+  /* font-size: 0.95rem; */
+  /* color: #555; */
+  /* line-height: 1.6; */
+/* } */
+.trainer-note {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.4;
+
+  overflow: hidden;
+  display: -webkit-box;
+  /* -webkit-line-clamp: 2;      Only 2 lines */
+  -webkit-box-orient: vertical;
+}
+
+
+/* ===== Facilities Section ===== */
+.facilities-list {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.facility-item {
+  background: #fff;
+  width: 260px;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+.facility-item-4{
+  background: #fff;
+  width: 830px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.facility-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+.facility-item-4:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.facility-icon {
+  font-size: 2rem;
+  display: inline-block;
+  margin-bottom: 15px;
+  color: #ffb703;
+}
+
+.facility-item h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.facility-item-4 h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.facility-item p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ===== Responsive Fix ===== */
+@media (max-width: 900px) {
+  .about-content,
+  .values-list {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .values-content {
+    align-items: center;
+  }
+
+  .value-card {
+    text-align: left;
+    width: 100%;
+  }
+}
+
+  
+    /* ================================
+   SERVICES PAGE
+================================ */
+
+/* Page Hero (already shared style) */
+
+.services-hero {
+  position: relative;
+  background: url("images/gym-bg.jpg") center / cover no-repeat ;
+  min-height: 70vh;
+  
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  position: absolute;
+    inset: 0;
+    /* background: rgba(0,0,0 ,0.6); */
+  
+}
+/* ================================
+   MEMBERSHIP PLANS
+================================ */
+
+.plans-list {
+  display: flex;
+  gap: 2rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.plan-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 2rem;
+  flex: 1;
+  min-width: 260px;
+  text-align: center;
+  position: relative;
+}
+
+.plan-card h3 {
+  background: #1d1d1d;
+  color: #fff;
+  padding: 1rem;
+  margin: -2rem -2rem 1.5rem;
+  border-radius: 8px 8px 0 0;
+}
+
+.plan-price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #e63946;
+  margin-bottom: 1.5rem;
+}
+
+.plan-features {
+  list-style: none;
+  margin-bottom: 2rem;
+  padding: 0;
+  text-align: start;
+}
+
+.plan-features li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e9ecef;
+  font-size: 0.95rem;
+}
+
+/* Featured (Premium) */
+.plan-card.featured {
+  border: 2px solid #e63946;
+}
+
+.plan-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #e63946;
+  color: #fff;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.75rem;
+  border-radius: 12px;
+}
+
+.memberships-paragraph{
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+}
+/* ================================
+   FITNESS PROGRAMS
+================================ */
+
+.programs-list {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+}
+
+.programs-list .program-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 2rem;
+  flex: 1;
+  min-width: 260px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border-top: 4px solid #e63946;
+}
+
+.programs-list .program-card-4{
+  background: #fff;
+  width: 1000px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-top: 4px solid #e63946;
+}
+.programs-list h3 {
+  color: #e63946;
+  margin-bottom: 1rem;
+}
+
+.programs-list p {
+  font-size: 0.95rem;
+}
+
+/* ================================
+   CLASS SCHEDULE
+================================ */
+
+.class-schedule .schedule-list {
+  margin-top: 2rem;
+}
+
+.schedule-days {
+  font-weight: 700;
+  margin: 2rem 0 1rem;
+}
+
+.schedule-item {
+  background: #fff;
+  border-left: 3px solid #e63946;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+  border-radius: 5px;
+}
+
+.schedule-text h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.schedule-text p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #666;
+  
+}
+
+.schedule-time {
+  font-weight: 700;
+  color: #e63946;
+  white-space: nowrap;
+}
+
+
+
+/* ================================
+   PERSONAL TRAINING CTA
+================================ */
+
+.personal-training-cta {
+  background: #f8f9fa;
+  text-align: center;
+}
+
+.training-cta-flex {
+  display: flex;
+  gap: 2rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.training-cta-flex .card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  flex: 1;
+  min-width: 260px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border-top: 4px solid #e63946;
+}
+.training-heading{
+  color: #e63946;
+}
+
+.training-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.training-cta-button {
+  margin-top: 2.5rem;
+}
+
+.training-cta-button .btn-accent {
+  background: #ffb703;
+  color: #1d1d1d;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+
+
+/* Stack content on small screens */
+@media (max-width: 768px) {
+  .schedule-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+/* gallery page */
+  /* =========================
+   PAGE HEADER (HERO)
+========================= */
+.gallery-hero {
+  position: relative;
+  background: url("images/gym-bg.jpg") center / cover no-repeat ;
+  min-height: 70vh;
+  
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  position: absolute;
+    inset: 0;
+    /* background: rgba(0,0,0 ,0.6); */
+  
+}
+
+.page-header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+
+/* =========================
+   GALLERY SECTIONS
+========================= */
+.gallery-section {
+  padding: 4rem 0;
+  background: #fff;
+}
+
+.gallery-alt {
+  background: #f7f7f7;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.section-header h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.section-header p {
+  color: #666;
+  font-size: 1rem;
+}
+
+
+/* =========================
+   GALLERY GRID
+========================= */
+.gallery-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.gallery-item {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+
+/* =========================
+   VARIED IMAGE HEIGHTS
+   (Matches design layout)
+========================= */
+.gallery-section:first-of-type .gallery-item:nth-child(4),
+.gallery-section:nth-of-type(2) .gallery-item:nth-child(4) {
+  grid-column: span 3;
+  height: 260px;
+}
+
+.gallery-item {
+  height: 220px;
+}
+
+
+/* =========================
+   CALL TO ACTION
+========================= */
+.gallery-cta {
+  background: #ffc107;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.gallery-cta h2 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.gallery-cta p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.gallery-cta .btn {
+  background: #000;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.gallery-cta .btn:hover {
+  opacity: 0.85;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 992px) {
+  .gallery-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-section:first-of-type .gallery-item:nth-child(4),
+  .gallery-section:nth-of-type(2) .gallery-item:nth-child(4) {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .gallery-list {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-item,
+  .gallery-section:first-of-type .gallery-item:nth-child(4),
+  .gallery-section:nth-of-type(2) .gallery-item:nth-child(4) {
+    grid-column: span 1;
+    height: 220px;
+  }
+}
+/* =========================
+   CONTACT PAGE
+========================= */
+
+/* Hero */
+.contact-hero {
+  position: relative;
+  background: url("images/gym-bg.jpg") center / cover no-repeat ;
+  min-height: 70vh;
+  
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  position: absolute;
+    inset: 0;
+    /* background: rgba(0,0,0 ,0.6); */
+  
+}
+
+.page-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: .5rem;
+}
+
+.page-hero p {
+  color: #ddd;
+}
+
+/* Contact Layout */
+.contact-flex {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  align-items: flex-start;
+  margin-right: 50px;
+}
+
+/* Cards */
+.card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,.1);
+}
+
+.dark-card {
+  background: #1d1d1d;
+  color: #fff;
+}
+
+/* Contact Form */
+.contact-form h2 {
+  margin-bottom: .5rem;
+}
+
+.contact-form p {
+  margin-bottom: 1.5rem;
+  color: #666;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: .4rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: .75rem;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #e63946;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Buttons */
+.btn-primary {
+  background: #e63946;
+  color: #fff;
+  border: none;
+  padding: .75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: #c62834;
+}
+
+.btn-secondary {
+  background: #e9ecef;
+  border: none;
+  padding: .75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.btn-secondary:hover{
+  background: #d2d1d1;
+}
+
+
+/* Contact Info */
+.contact-info h2 {
+  margin-bottom: 1rem;
+  color: #ffb703;
+
+}
+
+.info-list p {
+  margin-bottom: .75rem;
+  line-height: 1.6;
+}
+
+.opening-hours {
+  margin-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,.2);
+  padding-top: 1rem;
+}
+
+.opening-hours h3 {
+  color: #ffb703;
+  margin-bottom: 1rem;
+}
+
+.opening-hours ul {
+  list-style: none;
+  padding: 0;
+}
+
+.opening-hours li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: .6rem;
+  font-size: .9rem;
+}
+
+/* FAQ */
+.faq {
+  background: #f8f9fa;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.faq-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #e63946;
+  box-shadow: 0 2px 10px rgba(0,0,0,.08);
+}
+
+.faq-card h3 {
+  margin-bottom: .5rem;
+  color: #e63946;
+}
+
+.faq-full {
+  grid-column: span 3;
+}
+
+/* Find Us */
+.find-us {
+  /* text-align: center; */
+}
+.header-find-us{
+  text-align: center;
+}
+
+.map-placeholder {
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  color: #221818;
+}
+
+.btn-accent {
+  display: inline-block;
+  background: #ffb703;
+  color: #1d1d1d;
+  padding: .75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .contact-flex {
+    grid-template-columns: 1fr;
+  }
+
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .faq-full {
+    grid-column: auto;
+  }
+}
